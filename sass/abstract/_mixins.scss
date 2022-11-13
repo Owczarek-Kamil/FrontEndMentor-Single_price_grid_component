@@ -1,0 +1,19 @@
+@mixin small-padding {
+	padding: 1.2rem;
+}
+@mixin medium-padding {
+	padding: 2.5rem;
+}
+@mixin flex-column {
+	display: flex;
+	flex-direction: column;
+}
+@mixin flex-very-small-gap {
+	gap: 0.7rem;
+}
+@mixin flex-small-gap {
+	gap: 1.2rem;
+}
+@mixin flex-medium-gap {
+	gap: 2.5rem;
+}

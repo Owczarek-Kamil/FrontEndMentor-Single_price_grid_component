@@ -1,0 +1,79 @@
+@use '../abstract/' as *;
+
+.single-price-grid {
+	font-family: $basic-font-family;
+	font-size: $basic-font-size;
+	max-width: 35rem;
+	border-radius: $base-border-radius;
+	box-shadow: $base-box-shadow;
+	@include flex-column;
+	&__invitation {
+		background-color: $white;
+		@include medium-padding;
+		border-radius: $base-border-radius $base-border-radius 0 0;
+		@include flex-column;
+		@include flex-small-gap;
+
+		&-title {
+			color: $cyan;
+		}
+		&-period {
+			color: $bright-yellow;
+			font-size: $small-font-size;
+		}
+		&-description {
+			color: $grayish-blue;
+			font-size: $small-font-size;
+			line-height: 1.8;
+		}
+	}
+	&__pricing {
+		background-color: $cyan;
+		color: $light-gray;
+		@include medium-padding;
+		@include flex-column;
+		@include flex-small-gap;
+		&-price {
+			font-size: $basic-font-size * 1.5;
+			font-weight: 600;
+			display: flex;
+			align-items: center;
+			@include flex-small-gap;
+			&-settlement-period {
+				color: $grayish-blue;
+				font-size: $basic-font-size;
+			}
+		}
+		&-description {
+			font-size: $small-font-size;
+		}
+		&-sign-up {
+			&:link,
+			&:visited {
+				margin-top: 1rem;
+				background-color: $bright-yellow;
+				color: $white;
+				@include small-padding;
+				text-align: center;
+				text-decoration: none;
+				border-radius: $base-border-radius;
+				box-shadow: $base-box-shadow;
+			}
+		}
+	}
+	&__why-us {
+		background-color: lighten($cyan, 5);
+		color: $light-gray;
+		@include medium-padding;
+		@include flex-column;
+		@include flex-small-gap;
+		border-radius: 0 0 $base-border-radius $base-border-radius;
+		&-list {
+			list-style: none;
+			font-weight: 400;
+			@include flex-column;
+			@include flex-very-small-gap;
+			font-size: $small-font-size;
+		}
+	}
+}
