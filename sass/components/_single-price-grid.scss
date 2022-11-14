@@ -7,13 +7,21 @@
 	border-radius: $base-border-radius;
 	box-shadow: $base-box-shadow;
 	@include flex-column;
+	@media (min-width: $main-breakpoint) {
+		min-width: 80rem;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
 	&__invitation {
 		background-color: $white;
 		@include medium-padding;
 		border-radius: $base-border-radius $base-border-radius 0 0;
 		@include flex-column;
 		@include flex-small-gap;
-
+		@media (min-width: $main-breakpoint) {
+			flex-basis: 100%;
+			@include big-padding;
+		}
 		&-title {
 			color: $cyan;
 		}
@@ -34,6 +42,11 @@
 		@include medium-padding;
 		@include flex-column;
 		@include flex-small-gap;
+		@media (min-width: $main-breakpoint) {
+			flex-basis: 50%;
+			@include big-padding;
+			border-radius: 0 0 0 $base-border-radius;
+		}
 		&-price {
 			font-size: $basic-font-size * 1.5;
 			font-weight: 600;
@@ -69,6 +82,11 @@
 		@include flex-column;
 		@include flex-small-gap;
 		border-radius: 0 0 $base-border-radius $base-border-radius;
+		@media (min-width: $main-breakpoint) {
+			flex-basis: 50%;
+			@include big-padding;
+			border-radius: 0 0 $base-border-radius 0;
+		}
 		&-list {
 			list-style: none;
 			font-weight: 400;

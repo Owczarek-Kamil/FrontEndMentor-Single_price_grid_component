@@ -4,6 +4,9 @@
 @mixin medium-padding {
 	padding: 2.5rem;
 }
+@mixin big-padding {
+	padding: 3.5rem;
+}
 @mixin flex-column {
 	display: flex;
 	flex-direction: column;
